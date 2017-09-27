@@ -1,0 +1,63 @@
+\section{DYNSGD}
+
+\subsection{Abstract Model of a Parameter Server}
+\begin{frame}
+    \frametitle{Abstract Model of a Parameter Server}
+	\begin{itemize}
+		\item Denote PS as a tuple $(S, f_{clock}, f_{server}, \lambda, w_{0})$ ,where S is a stream of updates $\{u_{1}u_{2}...\}.$
+		\item $staleness(u_{i})=|\{u_{j}:f_{clock}(j)=f_{clock}(i)\}|.$
+		\item $\lambda(i)=\frac{1}{staleness(i)}$
+		\item $w(PS, i)=w_{0}+\sum_{j}\lambda(j)u_{j},   \forall f_{clock}(j)<i.$
+		\item $u(PS, i)= \sum_{j}\lambda(j)u_{j},   \forall f_{clock}(j)=i.$
+			\begin{itemize}
+				\item $w(PS,i+1) = w(PS, i) + u(PS, i)$
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\frametitle{Intuition}
+	\begin{figure}
+		\includegraphics[scale=0.8]{figure/intuitiondynsgd.png}
+	\end{figure}
+\end{frame}
+\begin{frame}
+	\begin{figure}
+		\includegraphics[scale=0.8]{figure/consgdlimit.png}
+	\end{figure}
+\end{frame}
+
+
+
+
+\subsection{Implementation of DYNSGD}
+\begin{frame}
+    \frametitle{Fast staleness computing}
+	\begin{itemize}
+		\item $V(m)$: the version of the local update from worker m.
+		\item $S(v)$: the staleness of the local update stamped with version v.
+		\item $staleness(u_{c}^{m}) = S(V(m))$
+		\item $\Delta u = \frac{1}{d}u_{c}^{m}+\frac{d-1}{d}u(PS,v)-u(PS,v)=\frac{1}{d}(u_{c}^{m}-u(PC,v))$
+	\end{itemize} 
+\end{frame}
+
+
+
+
+\subsection{Algorithm}
+\begin{frame}
+    \frametitle{Algorithm}
+	\begin{figure}
+		\includegraphics[scale=0.5]{figure/dynsgd.png}
+	\end{figure} 
+\end{frame}
+
+\subsection{Partition Synchronization}
+\begin{frame}
+    \frametitle{Partition Synchronization}
+	\begin{figure}
+		\includegraphics[scale=0.8]{figure/partitionsyn.png}
+	\end{figure} 
+\end{frame}
+
+
+

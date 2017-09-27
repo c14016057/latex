@@ -1,0 +1,90 @@
+\beamer@endinputifotherversion {3.36pt}
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\sectionentry {1}{Introduction}{2}{Introduction}{0}}
+\headcommand {\beamer@sectionpages {1}{1}}
+\headcommand {\beamer@subsectionpages {1}{1}}
+\headcommand {\slideentry {1}{0}{1}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Motivation}}\headcommand {\beamer@subsectionpages {2}{2}}
+\headcommand {\slideentry {1}{1}{1}{3/3}{Motivation}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{4}{Heterogeneity-aware Distributed Parameter Server}}\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\slideentry {1}{2}{1}{4/4}{Heterogeneity-aware Distributed Parameter Server}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\sectionentry {2}{Preliminaries}{5}{Preliminaries}{0}}
+\headcommand {\beamer@sectionpages {2}{4}}
+\headcommand {\beamer@subsectionpages {4}{4}}
+\headcommand {\slideentry {2}{0}{1}{5/5}{}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{6}{Destributed SGD}}\headcommand {\beamer@subsectionpages {5}{5}}
+\headcommand {\slideentry {2}{1}{1}{6/6}{Destributed SGD}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{7}{Instroduction of existing systems}}\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\slideentry {2}{2}{1}{7/7}{Instroduction of existing systems}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{8}{Modeling Heterogeneous Clusters}}\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\slideentry {2}{3}{1}{8/8}{Modeling Heterogeneous Clusters}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{9}{Experiment on existing systems}}\headcommand {\beamer@subsectionpages {8}{8}}
+\headcommand {\slideentry {2}{4}{1}{9/9}{Experiment on existing systems}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\sectionentry {3}{CONSGD}{10}{CONSGD}{0}}
+\headcommand {\beamer@sectionpages {5}{9}}
+\headcommand {\beamer@subsectionpages {9}{9}}
+\headcommand {\slideentry {3}{0}{1}{10/10}{}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{11}{Algorithm}}\headcommand {\beamer@subsectionpages {10}{10}}
+\headcommand {\slideentry {3}{1}{1}{11/11}{Algorithm}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{12}{Intuition}}\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\slideentry {3}{2}{1}{12/12}{Intuition}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {3}{2}{2}{13/13}{Intuition}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{14}{Choose $\lambda $}}\headcommand {\beamer@subsectionpages {12}{13}}
+\headcommand {\slideentry {3}{3}{1}{14/14}{Choose $\lambda $}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{15}{Limitation}}\headcommand {\beamer@subsectionpages {14}{14}}
+\headcommand {\slideentry {3}{4}{1}{15/15}{Limitation}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\sectionentry {4}{DYNSGD}{16}{DYNSGD}{0}}
+\headcommand {\beamer@sectionpages {10}{15}}
+\headcommand {\beamer@subsectionpages {15}{15}}
+\headcommand {\slideentry {4}{0}{1}{16/16}{}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{17}{Abstract Model of a Parameter Server}}\headcommand {\beamer@subsectionpages {16}{16}}
+\headcommand {\slideentry {4}{1}{1}{17/17}{Abstract Model of a Parameter Server}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\slideentry {4}{1}{2}{18/18}{Abstract Model of a Parameter Server}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\slideentry {4}{1}{3}{19/19}{Abstract Model of a Parameter Server}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{20}{Implementation of DYNSGD}}\headcommand {\beamer@subsectionpages {17}{19}}
+\headcommand {\slideentry {4}{2}{1}{20/20}{Implementation of DYNSGD}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{21}{Algorithm}}\headcommand {\beamer@subsectionpages {20}{20}}
+\headcommand {\slideentry {4}{3}{1}{21/21}{Algorithm}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{22}{Partition Synchronization}}\headcommand {\beamer@subsectionpages {21}{21}}
+\headcommand {\slideentry {4}{4}{1}{22/22}{Partition Synchronization}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\sectionentry {5}{Experiment and Conclusion}{23}{Experiment and Conclusion}{0}}
+\headcommand {\beamer@sectionpages {16}{22}}
+\headcommand {\beamer@subsectionpages {22}{22}}
+\headcommand {\slideentry {5}{0}{1}{23/23}{}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{24}{Experiment}}\headcommand {\beamer@subsectionpages {23}{23}}
+\headcommand {\slideentry {5}{1}{1}{24/24}{Experiment}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{25}{Conclusion}}\headcommand {\beamer@subsectionpages {24}{24}}
+\headcommand {\slideentry {5}{2}{1}{25/25}{Conclusion}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{26}{Future Work}}\headcommand {\beamer@subsectionpages {25}{25}}
+\headcommand {\slideentry {5}{3}{1}{26/26}{Future Work}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\beamer@partpages {1}{26}}
+\headcommand {\beamer@subsectionpages {26}{26}}
+\headcommand {\beamer@sectionpages {23}{26}}
+\headcommand {\beamer@documentpages {26}}
+\headcommand {\def \inserttotalframenumber {26}}

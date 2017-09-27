@@ -1,0 +1,292 @@
+%=======================02-713 LaTeX template, following the 15-210 template==================
+%
+% You don't need to use LaTeX or this template, but you must turn your homework in as
+% a typeset PDF somehow.
+%
+% How to use:
+%    1. Update your information in section "A" below
+%    2. Write your answers in section "B" below. Precede answers for all 
+%       parts of a question with the command "\question{n}{desc}" where n is
+%       the question number and "desc" is a short, one-line description of 
+%       the problem. There is no need to restate the problem.
+%    3. If a question has multiple parts, precede the answer to part x with the
+%       command "\part{x}".
+%    4. If a problem asks you to design an algorithm, use the commands
+%       \algorithm, \correctness, \runtime to precede your discussion of the 
+%       description of the algorithm, its correctness, and its running time, respectively.
+%    5. You can include graphics by using the command \includegraphics{FILENAME}
+%
+\documentclass[11pt]{article}
+
+\usepackage[UTF8, heading = false, scheme = plain]{ctex} % chinese !!!!
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{CJK}
+\usepackage{manfnt}
+\usepackage{listings}
+
+\usepackage{algorithm}% http://ctan.org/pkg/algorithm
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+
+
+\setCJKmainfont{STHeiti} % chinese type
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+\setlength{\headheight}{13.6pt}
+
+% define
+\newcommand\question[2]{\vspace{.25in}\hrule\textbf{#1: #2}\vspace{.5em}\hrule\vspace{.10in}}
+\renewcommand\part[1]{\vspace{.10in}\textbf{#1}}
+\newcommand\correctness{\vspace{.10in}\textbf{Correctness: }}
+\newcommand\runtime{\vspace{.10in}\textbf{Running time: }}
+\pagestyle{fancyplain}
+
+% header
+\lhead{\textbf{\NAME\ (\ANDREWID)}}
+\chead{\textbf{HW\HWNUM}}
+\rhead{演算法數學分析, \today}
+
+
+% start content
+\begin{document}\raggedright
+%Section A==============Change the values below to match your information==================
+\newcommand\NAME{Shiang-Yun Yang 楊翔雲}  % your name
+\newcommand\ANDREWID{R04922067}     % your andrew id
+\newcommand\HWNUM{5}              % the homework number
+%Section B==============Put your answers to the questions below here=======================
+
+% no need to restate the problem --- the graders know which problem is which,
+% but replacing "The First Problem" with a short phrase will help you remember
+% which problem this is when you read over your homeworks to study.
+
+\part{應用的課本公式列表}
+
+\begin{flalign*}
+& \binom{r}{m} \binom{m}{k} = \binom{r}{k} \binom{r-k}{m-k}
+	&& \text{, integers } m, k && \text{(5.21)} \\
+& \sum_k \binom{r}{m+k} \binom{s}{n-k} = \binom{r+s}{m+n}	
+		&& \text{, integers } m, n && \text{(5.22)} \\
+& \sum_{k \le l} \binom{l-k}{m} \binom{s}{k-n} (-1)^k = (-1)^{l+m} \binom{s-m-1}{l-m-n}
+		&& \text{, integers } l, m, n \ge 0 && \text{(5.25)} \\
+& \sum_{0 \le k \le l} \binom{l-k}{m} \binom{q+k}{n} = \binom{l+q+1}{m+n+1}
+		&& \text{, integers } l, m > 0 \text{, integers } n \ge q \ge 0 && \text{(5.26)} \\
+& \sum_k \binom{m-r+s}{k} \binom{n+r-s}{n-k} \binom{r+k}{m+n} = \binom{r}{m} \binom{s}{n}
+		&& \text{, integers } m, n && \text{(5.28)} \\
+& \binom{r}{k} \binom{r-1/2}{k} = \binom{2r}{2k} \binom{2k}{k} \bigg/2^{2k} 
+		&& \text{, integers} k && \text{(5.35)}
+\end{flalign*}
+
+\question{Problem 1} {5-14 Prove identity (5.25) by negating the upper index in
+	Vandermonde's convolution (5.22). Then show that another negation yields (5.26).
+}
+
+\part{Answer:}
+
+\begin{itemize}
+	\item Part 1: 推導式 5.25，
+	\begin{align*}
+		& \sum_{k \le l} \binom{l-k}{m} \binom{s}{k-n} (-1)^k 	&& \text{必須滿足} m \ge 0 \text{，否則 } \binom{l-k}{m} = 0 \\
+		& = \sum_{k \le l} \binom{l-k}{l-k-m} \binom{s}{k-n} (-1)^k
+		&& \because \binom{l-k}{m} = \binom{l-k}{l-k-m} \\
+		& = \sum_{k \le l} (-1)^{l-k-m} \binom{-m-1}{l-k-m} \binom{s}{k-m} (-1)^k
+		&& \because \binom{r}{k} = (-1)^k \binom{k-r-1}{k} \\
+		& = \sum_{k \le l} (-1)^{l-m} \binom{-m-1}{(l-m)-k} \binom{s}{-m+k}
+		&& \because \text{(5.22), } \sum_k \binom{r}{m+k} \binom{s}{n-k} = \binom{r+s}{m+n} \\
+		& = (-1)^{l-m} \binom{s-m-1}{l-m+n}
+	\end{align*}
+	得證式 5.25。範圍僅 $m \ge 0$ 是必要的。若 $n \ge 0$，則 $k$ 代入時只有非負情況有值 (因 $\binom{s}{k-n}$)，此時又因 $m \ge 0$，和 $\binom{l-k}{m}$ 非零，則 $l \ge 0$，最後得到 $l, m, n \ge 0$。
+	\item Part 2: 推導式 5.26
+	\begin{align*}
+		& \sum_{0 \le k \le l} \binom{l-k}{m} \binom{q+k}{n} \\
+		&= \sum_{0 \le k \le l} \binom{l-k}{m} \binom{q+k}{q+k-n} && \text{對稱性質} \\
+		&= \sum_{0 \le k \le l} \binom{l-k}{m} (-1)^{q+k-n}\binom{-n-1}{q+k-n} && \text{利用 upper negation}\\
+		&= (-1)^{q-n} \sum_{0 \le k \le l} \binom{l-k}{m} \binom{-n-1}{q+k-n} (-1)^k \\
+		&= (-1)^{q-n} (-1)^{l+m} \binom{-n-1-m-1}{l-m-n-q} 
+			&& \text{代}\; 5.25 \;
+				(l,m,n,s) \leftarrow (l, m, n-q, -n-1)\\
+		&= (-1)^{q-n} (-1)^{l+m} (-1)^{l-m-n+q} \binom{l+q+1}{l-m-n+q} \\
+		&= (-1)^{2l + 2n + 2q} \binom{l+q+1}{l+q-n-m} \\
+		&= \binom{l+q+1}{n+m+1}
+	\end{align*}
+	得證式 5.26。代入式 5.25 推導時，必須滿足 $n-q \ge 0$ 和 $l, m \ge 0$，在 5.26 定義的範圍 $l, m \ge 0$ 及 $n \ge q \ge 0$ 滿足推導所需。
+\end{itemize}
+
+\question{Problem 2} {5-43 Prove the triple-binomial identity (5.28). Hint: First replace $\binom{r+k}{m+n}$ by $\sum_j \binom{r}{m+n-j} \binom{k}{j}$ }
+
+\part{Answer:}
+
+\begin{align*}
+& \sum_k \binom{m-r+s}{k} \binom{n+r-s}{n-k} \binom{r+k}{m+n} \\
+&= \sum_k \binom{m-r+s}{k} \binom{n+r-s}{n-k} \left ( \sum_j \binom{r}{m+n-j} \binom{k}{j} \right ) 
+	&& \text{5.22 替換}  \\
+&= \sum_k \binom{n+r-s}{n-k} \left ( \sum_j \binom{r}{m+n-j} \binom{m-r+s}{k} \binom{k}{j} \right ) 
+	&& \text{5.21 移除}\; k \\
+&= \sum_k \binom{n+r-s}{n-k} \sum_j \binom{r}{m+n-j} \binom{m-r+s}{j} \binom{m-r+s-j}{k-j} 
+	&& \text{重新排列} \\
+&= \sum_j \binom{r}{m+n-j} \binom{m-r+s}{j} \sum_k \binom{n+r-s}{n-k} \binom{m-r+s-j}{k-j} \\
+&= \sum_j \binom{r}{m+n-j} \binom{m-r+s}{j} \sum_k \binom{m-r+s-j}{-j+k} \binom{n+r-s}{n-k} 
+	&& \text{5.22 替換}\\
+&= \sum_j \binom{r}{m+n-j} \binom{m-r+s}{j} \binom{n+m-j}{n-j} \\
+&= \sum_j \binom{m-r+s}{j} \binom{r}{m+n-j} \binom{m+n-j}{m} 
+	&& \text{對稱性質, 5.21 提出常數項} \\
+&= \sum_j \binom{m-r+s}{j} \binom{r}{m} \binom{r-m}{n-j} \\
+&= \binom{r}{m} \sum_j \binom{m-r+s}{j} \binom{r-m}{n-j} \\
+&= \binom{r}{m} \binom{s}{n} 
+	&& \text{得證}
+\end{align*}
+
+\question{Problem 3} {5-58 If $m$ and $n$ are integers with $0 \le m \le n$, let
+	$$T_{m,n} = \sum_{0 \le k < n} \binom{k}{m} \frac{1}{n-k}$$
+	Find a relation between $T_{m,n}$ and $T_{m-1,n-1}$, then solve your recurrence
+	by applying a summation factor.
+}
+
+\part{Answer:}
+
+\begin{flalign*}
+T_{m,n} &= \sum_{0 \le k < n} \binom{k}{m} \frac{1}{n-k} \\
+	&= \sum_{1 \le k < n} \frac{k}{m} \binom{k-1}{m-1} \frac{1}{n-k} && \text{let } m > 0, \; \binom{k}{m} = \frac{k}{m} \binom{k-1}{m-1}\\
+	&= \sum_{1 \le k < n} \frac{(k-n)+n}{m} \binom{k-1}{m-1} \frac{1}{n-k} && \text{嘗試消除 }\; n-k\\
+	&= \sum_{1 \le k < n} \frac{k-n}{m} \binom{k-1}{m-1} \frac{1}{n-k} + \sum_{1 \le k < n} \frac{n}{m} \binom{k-1}{m-1} \frac{1}{n-k} \\
+	&= - \frac{1}{m} \sum_{1 \le k < n} \binom{k-1}{m-1} +
+		\sum_{0 \le k < n-1} \frac{n}{m} \binom{k}{m-1} \frac{1}{n-k-1} && \text{代入} \; \sum_{0 \le k \le n} \binom{k}{m} = \binom{n+1}{m+1}, \; \text{修正下標} \\
+	&= - \frac{1}{m} \binom{n-1}{m} + \frac{n}{m} T_{m-1, n-1}
+\end{flalign*}
+
+\begin{itemize}
+	\item 
+		得到 $T_{m,n} = \frac{n}{m} T_{m-1,n-1} - \frac{1}{m} \binom{n-1}{m}$
+	\item
+		Summation factor ($0 \le m \le n$)
+	$$s_n = \frac{a_{n-1} a_{n-2} \cdots a_1}{b_n b_{n-1} \cdots b_2} = \frac{1}{\frac{n}{m} \frac{n-1}{m-1} \cdots} =\binom{n}{m}^{-1}$$
+	\item
+		改寫原式
+		$$\frac{T_{m,n}}{\binom{n}{m}} = \frac{T_{m-1,n-1}}{\binom{n-1}{m-1}} + \frac{1}{n} - \frac{1}{m}$$
+	\item 
+		展開遞迴式得到
+		\begin{align*}
+			\frac{T_{m,n}}{\binom{n}{m}} &= T_{0,n-m} + H_n - H_m - H_{n-m}	\\
+			&= H_{n-m} + H_n - H_m - H_{n-m} \\
+		\Rightarrow T_{m,n} &= \binom{n}{m} (H_n - H_m)
+		\end{align*}
+\end{itemize}
+
+\question{Problem 4} {5-24 Find $\sum_k \binom{n}{m+k} \binom{m+k}{2k} 4^k$ by using hypergeometric series.}
+
+\part{Answer:}
+
+\begin{itemize}
+	\item 當 $k = 0$ 時，$t_0 = \binom{n}{m} \binom{m}{0} 4^0 = \binom{n}{m}$。
+	\item 求 $\frac{t_{k+1}}{t_k} = ?$，
+	$$\frac{t_{k+1}}{t_k} = \frac{\binom{n}{m+k+1}\binom{m+k+1}{2k+2} 4^{k+1}}{\binom{n}{m+k}\binom{m+k}{2k} 4^k} = \frac{(n-m-k)(m-k)}{(2k+2)(2k+1)} \times 4 = \frac{(k-m)(k-n+m)}{(k+\frac{1}{2})(k+1)}$$
+	\item 
+		\begin{align*}
+		\binom{n}{m} F \left (\left.\begin{matrix}
+m-n, -m & \\ 
+ 1/2 & 
+\end{matrix}\right|1 \right) &= \binom{n}{m} \frac{(1/2-m+n)^{\overline{m}}}{(1/2)^{\overline{m}}} 
+			&& \because \text{5.93,} \; F \left (\left.\begin{matrix}
+a, -n & \\ 
+ c & 
+\end{matrix}\right|1 \right) = \frac{(c-a)^{\overline{n}}}{c^{\overline{n}}}\\
+			&= \binom{n}{m} \frac{(n-\frac{1}{2})!}{(m-\frac{1}{2})!(n-m-\frac{1}{2})!} \\
+			&= \binom{n}{m} \frac{(n-\frac{1}{2})!m!}{(m-\frac{1}{2})!(n-m-\frac{1}{2})!m!} \\
+			&= \binom{n}{m} \binom{n-\frac{1}{2}}{m} \frac{m!}{(m-\frac{1}{2})!} \\
+			&= \binom{2n}{2m} \binom{2m}{m} \frac{1}{2^{2m}} \frac{m!}{(m-\frac{1}{2})!} 
+				&& \because \text{5.35}  \\
+			&= \binom{2n}{2m} \frac{(2m)!}{m!m!} \frac{m!}{2^{2m} (m-\frac{1}{2})!} 
+				&& \because (2m)! = 2^{2m} m! (m-1/2)!\\
+			&= \binom{2n}{2m}
+		\end{align*}
+	\item
+		得 $\sum_k \binom{n}{m+k} \binom{m+k}{2k} 4^k = \binom{n}{m} F \left (\left.\begin{matrix}
+m-n, -m & \\ 
+ 1/2 & 
+\end{matrix}\right|1 \right) = \binom{2n}{2m}$
+\end{itemize}
+
+\question{Problem 5} {Evaluate $$\frac{1}{N} \sum_{1 \le k \le N} \sum_{t} \frac{t \binom{N-k}{t} \binom{k-1}{t}}{\binom{N-1}{k-1}}$$}
+
+\part{Answer:}
+
+\begin{flalign*}
+\frac{1}{N} \sum_{1 \le k \le N} \sum_{t} \frac{t \binom{N-k}{t} \binom{k-1}{t}}{\binom{N-1}{k-1}} 
+	&= \frac{1}{N} \sum_{1 \le k \le N} \frac{1}{\binom{N-1}{k-1}} \sum_{t} t \binom{N-k}{t} \binom{k-1}{t} \\
+	&= \frac{1}{N} \sum_{1 \le k \le N} \frac{1}{\binom{N-1}{k-1}} \sum_{t} \binom{N-k}{t} \binom{k-2}{t-1} (k-1) 
+		&& \because \binom{r}{k} = \frac{r}{k} \binom{r-1}{k-1} \\
+	&= \frac{1}{N} \sum_{1 \le k \le N} \frac{1}{\binom{N-1}{k-1}} (k-1) \binom{N-2}{N-k-1}
+		&& \because \text{(5.23)} \\
+	&= \frac{1}{N} \sum_{1 \le k \le N} \frac{1}{\binom{N-1}{k-1}} (k-1) \binom{N-2}{k-1}
+		\\
+	&= \frac{1}{N} \sum_{1 \le k \le N} (k-1) \frac{N-k}{N-1} \\
+	&= \frac{1}{N(N-1)} \sum_{1 \le k \le N} \left [ N(k-1) + (k-k^2) \right ] \\
+	&= \frac{N}{2} + \frac{N+1}{2(N-1)} - \frac{(N+1)(2N+1)}{2(N-1)} 
+		= \frac{N}{2} - \frac{N(N+1)}{N-1}\\
+\end{flalign*}
+
+\question{Problem 6} {Let $S(n)$ be the worst-case number of comparisons needed by \textbf{Merge Sort} to sort $n$ numbers. The algorithm of the program shows that 
+	\begin{align*}
+		S(n) &= S(\lfloor n/2 \rfloor) + S(\lceil n/2 \rceil) + n-1, \; n > 1; \\
+		S(1) &= 0
+	\end{align*}
+	Solve the recurrence for the general case, for $n = 1, \;2, \;3, \cdots$
+}
+
+\part{Answer:}
+
+\begin{enumerate}
+	\item 對於每一個序列元素在每一層貢獻比較次數 1，之後再扣掉總共展開幾次 $S(n)$，如此一來就可以算出 $S(n)$ 累加的 $n-1$ 次的花費。
+	\item Merge Sort 總共有 $\lceil \lg N \rceil$ 層，然而並不是每一個序列元素都經過 $\lceil \lg N \rceil$ 層，無關緊要地假想排列一個元素時，依舊多展開一層，直到 $\lceil \lg N \rceil$ 層。這次估算至少需要 $N \lceil \lg N \rceil$ 比較次數。
+	\item 由於每一次遞迴，恰有一個元素不用比較，統計呼叫函數的次數，在 $\lceil \lg N \rceil$ 層中，總共呼叫 $2^{\lceil \lg N \rceil} - 1$ 次。在扣掉的同時，順便單一元素衍伸出來的那一層比較次數扣掉，故不影響原本的答案。
+	\item 得到 $S(n) = N \lceil \lg N \rceil - 2^{\lceil \lg N \rceil} + 1$。接著用數學歸納法，證明推測的公式是正確的。
+\end{enumerate}
+
+\begin{itemize}
+	\item 當 $n = 1$ 時，$S(1) = 0 = 1 \times 0 - 2^0 +1 = 0$ 成立。
+	\item 當 $n = 2$ 時，$S(2) = S(1) + S(1) + 1 = 2 \times 1 - 2^1 +1 = 1$ 成立。
+	\item 假設 $k \le n-1$ 時皆成立，則 $S(n)$ 分成幾種情況考慮
+		\begin{itemize}
+			\item 若 $N$ 是偶數，則 
+				\begin{align*}
+			S(N) &= 2S(N/2) + n-1 \\
+			&= 2 \frac{N}{2} \left \lceil \lg \frac{N}{2} \right \rceil - 2^{\left \lceil \lg \frac{N}{2} \right \rceil + 1} + 2 + N - 1 \\
+			&= N (\left \lceil \lg \frac{N}{2} + 1 \right \rceil) - 2^{\left \lceil \lg \frac{N}{2} \right \rceil + 1} + 1 \\
+			&= N \left \lceil \lg N \right \rceil - 2^{\left \lceil \lg N \right \rceil} + 1
+				&& \text{成立}
+				\end{align*}
+			\item 若 $N$ 是奇數且滿足 
+				$\left \lceil \lg \frac{N-1}{2} \right \rceil = \left \lceil \lg \frac{N+1}{2} \right \rceil$，則 
+				\begin{align*}
+			S(N) &= \frac{N-1}{2} \left \lceil \lg \frac{N-1}{2} \right \rceil - 2^{\left \lceil \lg \frac{N-1}{2} \right \rceil} + 1 +
+			\frac{N+1}{2} \left \lceil \lg \frac{N+1}{2} \right \rceil - 2^{\left \lceil \lg \frac{N+1}{2} \right \rceil} + 1 + N-1 \\
+				&= N \left \lceil \lg \frac{N-1}{2} \right \rceil - 2^{\left \lceil \lg \frac{N+1}{2} \right \rceil + 1} + N+1 \\
+				&= N \left \lceil \lg \frac{N+1}{2} + 1\right \rceil - 2^{\left \lceil \lg \frac{N+1}{2} + 1\right \rceil} + 1 \\
+				&= N \left \lceil \lg (N+1) \right \rceil - 2^{\left \lceil \lg (N+1) \right \rceil} + 1 \\
+				&= N \left \lceil \lg N \right \rceil - 2^{\left \lceil \lg N \right \rceil} + 1
+				\end{align*}
+			\item 若 $N$ 是奇數且滿足 
+				$\left \lceil \lg \frac{N-1}{2} \right \rceil \neq \left \lceil \lg \frac{N+1}{2} \right \rceil$，則只有一種可能 $\left \lceil \lg \frac{N-1}{2} \right \rceil +1 = \left \lceil \lg \frac{N+1}{2} \right \rceil$，求解交集得到 $N=2^{m+1}+1, \; m \ge 0$。
+				\begin{itemize}
+					\item
+				令 $N = 2^{m+1}+1, \; \lceil \lg N \rceil = m+2$
+					\item 
+					\begin{align*}
+						S(N) &= \frac{N-1}{2} m - 2^m + 1 + \frac{N+1}{2} (m+1) - 2^{m+1} + 1 + N - 1 \\
+							&= Nm + \frac{N+1}{2} - 3 \times 2^m + N + 1 \\
+							&= Nm + \frac{N+1}{2} - 2^{m+1} - 2^m + N +1 \\
+							&= Nm + \frac{2^{m+1}+2}{2} - 2^{m+1} - 2^m + N + 1 \\
+							&= Nm + 1 - 2^{m+1} + N + 1 \\
+							&= Nm + 3 \\
+							&= N(m+2) - 2N + 3 \\
+							&= N \left \lceil \lg N \right \rceil - (2^{m+2} + 2) + 3 \\
+							&= N \left \lceil \lg N \right \rceil - 2^{\left \lceil \lg N \right \rceil} + 1
+					\end{align*}
+				\end{itemize}
+			\item 由數學歸納法得證。
+		\end{itemize}
+\end{itemize}
+
+\end{document}

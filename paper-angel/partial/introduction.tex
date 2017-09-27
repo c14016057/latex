@@ -1,0 +1,32 @@
+\section{Introduction}
+
+\subsection{Motivation}
+\begin{frame}
+    \frametitle{Motivation}
+	\begin{itemize}
+		\item The existing systems have bad performance on heterogeneity environments.
+			\begin{itemize}
+				\item Network heterogeneity: Data transmission between data centers is normally slower than within data centers.
+				\item Sharing cluster: Different instances of the same job often have very different execution time. 
+				\item Spot Instances on the Cloud: To minimize cost, a rented cluster often contains different types of instances. 
+			\end{itemize}
+	\end{itemize} 
+\end{frame}
+
+\subsection{Heterogeneity-aware Distributed Parameter Server}
+\begin{frame}
+    \frametitle{Heterogeneity-aware Distributed Parameter Server}
+	\begin{itemize}
+		\item A novel distributed machine learning system with SGD optimizer.
+			\begin{itemize}
+				\item Optimizer: Global learning rate.
+					\begin{itemize}
+						\item CONSGD.
+						\item DYNSGD.
+					\end{itemize}
+				\item Focus on reducing the \# updates.
+			\end{itemize}
+	\end{itemize} 
+\end{frame}
+
+

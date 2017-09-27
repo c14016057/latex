@@ -1,0 +1,33 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Abstract}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Goals}{4}{0}{1}
+\beamer@subsectionintoc {1}{3}{Architecture}{5}{0}{1}
+\beamer@sectionintoc {2}{Challenge}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{Parameters}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{Long idle time}{8}{0}{2}
+\beamer@sectionintoc {3}{(key, value) Vector}{9}{0}{3}
+\beamer@subsectionintoc {3}{1}{Key}{10}{0}{3}
+\beamer@subsectionintoc {3}{2}{Value}{11}{0}{3}
+\beamer@subsectionintoc {3}{3}{Vector}{12}{0}{3}
+\beamer@sectionintoc {4}{Range push and pull}{13}{0}{4}
+\beamer@subsectionintoc {4}{1}{Motivation}{14}{0}{4}
+\beamer@subsectionintoc {4}{2}{Idea}{15}{0}{4}
+\beamer@subsectionintoc {4}{3}{Is it correct ?}{16}{0}{4}
+\beamer@sectionintoc {5}{Reduce idle}{17}{0}{5}
+\beamer@subsectionintoc {5}{1}{Assumption}{18}{0}{5}
+\beamer@subsectionintoc {5}{2}{What range size is the best ? }{19}{0}{5}
+\beamer@subsectionintoc {5}{3}{Best size}{20}{0}{5}
+\beamer@subsectionintoc {5}{4}{Server view}{21}{0}{5}
+\beamer@sectionintoc {6}{Mnist model}{22}{0}{6}
+\beamer@sectionintoc {7}{Implimentation}{25}{0}{7}
+\beamer@subsectionintoc {7}{1}{Training Model}{26}{0}{7}
+\beamer@subsectionintoc {7}{2}{Server Synchronization}{28}{0}{7}
+\beamer@sectionintoc {8}{Future work}{29}{0}{8}
+\beamer@subsectionintoc {8}{1}{Future work}{30}{0}{8}
+\beamer@sectionintoc {9}{Stale Synchronous Parallel}{31}{0}{9}
+\beamer@subsectionintoc {9}{1}{Sliding Window Method}{32}{0}{9}
+\beamer@subsectionintoc {9}{2}{Parallel SGD}{34}{0}{9}
+\beamer@sectionintoc {10}{Global learning rate with SSP SGD}{38}{0}{10}
+\beamer@subsectionintoc {10}{1}{Angel Parameter Server}{39}{0}{10}
+\beamer@subsectionintoc {10}{2}{Spliting gradients}{41}{0}{10}

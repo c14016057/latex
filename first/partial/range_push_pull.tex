@@ -1,0 +1,31 @@
+\section{Range push and pull}
+
+\subsection{Motivation}
+\begin{frame}
+    \frametitle{Motivation}
+	\begin{itemize}
+		\item Wokers waste a lot of time to wait network communication and parameter aggregation.
+   		\begin{figure}
+			\includegraphics[scale=0.4]{figure/time.png}
+		\end{figure}
+	\end{itemize}
+\end{frame}
+
+\subsection{Idea}
+\begin{frame}
+    \frametitle{Idea}
+	\begin{itemize}
+		\item Sending less data to server. 
+		\item Sending vectors whose key is within the given range.   
+	\end{itemize}
+\end{frame}
+
+\subsection{Is it correct ?}
+\begin{frame}
+    \frametitle{Is it correct ?}
+    \begin{figure}
+		\includegraphics[scale=0.4]{figure/spGD.png}
+	\end{figure}
+\end{frame}
+
+
