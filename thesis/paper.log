@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.9.27)  30 NOV 2017 13:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.9.27)  15 MAR 2018 09:43
 entering extended mode
 **./paper.tex
 (paper.tex
@@ -938,187 +938,148 @@ Dictionary: translator-theorem-dictionary, Language: English
  (paper.nav) [1{/home/r05922135/.miktex/texmfs/data/pdftex/config/pdftex.map}
 
 ]
-(partial/InternetBottleneck.tex (paper.toc) [2
+(partial/Introduction.tex (paper.toc) [2
 
 ] [3
 
 ] [4
 
-])
-(partial/layer_experiment.tex (paper.toc)
-Overfull \vbox (5.63348pt too high) has occurred while \output is active []
+]) (partial/Prune.tex
+(paper.toc)
+Overfull \vbox (5.13345pt too high) has occurred while \output is active []
 
 
 [5
 
 ]
-Overfull \vbox (5.63348pt too high) has occurred while \output is active []
+<figure/gradient_observation.JPG, id=282, 637.63219pt x 232.61906pt>
+File: figure/gradient_observation.JPG Graphic file (type jpg)
+<use figure/gradient_observation.JPG>
+Package pdftex.def Info: figure/gradient_observation.JPG  used on input line 9.
+ on input line 9.
+Package pdftex.def Info: Requested size: 255.04836pt x 93.04596pt on input line
+ 9.
+
+Overfull \vbox (5.13345pt too high) has occurred while \output is active []
 
 
 [6
 
-]
-<figure/Initial.PNG, id=316, 399.74344pt x 263.48438pt>
-File: figure/Initial.PNG Graphic file (type png)
-<use figure/Initial.PNG>
-Package pdftex.def Info: figure/Initial.PNG  used on input line 20. on input li
-ne 20.
-Package pdftex.def Info: Requested size: 119.92395pt x 79.04591pt on input line
- 20.
-
-Overfull \vbox (5.63348pt too high) has occurred while \output is active []
+ <./figure/gradient_observation.JPG>]
+Overfull \vbox (5.13345pt too high) has occurred while \output is active []
 
 
 [7
 
- <./figure/Initial.PNG>]
-<figure/50-1.PNG, id=355, 440.39531pt x 491.58656pt>
-File: figure/50-1.PNG Graphic file (type png)
-<use figure/50-1.PNG>
-Package pdftex.def Info: figure/50-1.PNG  used on input line 28. on input line 
-28.
-Package pdftex.def Info: Requested size: 132.1196pt x 147.4771pt on input line 
-28.
-
-Overfull \vbox (5.63348pt too high) has occurred while \output is active []
+]
+Overfull \vbox (5.13345pt too high) has occurred while \output is active []
 
 
 [8
 
- <./figure/50-1.PNG>]
-<figure/50-2.PNG, id=393, 429.85594pt x 528.47438pt>
-File: figure/50-2.PNG Graphic file (type png)
-<use figure/50-2.PNG>
-Package pdftex.def Info: figure/50-2.PNG  used on input line 34. on input line 
-34.
-Package pdftex.def Info: Requested size: 120.35884pt x 147.97182pt on input lin
-e 34.
+]
+<figure/stdexp1.JPG, id=388, 374.90062pt x 239.39438pt>
+File: figure/stdexp1.JPG Graphic file (type jpg)
+<use figure/stdexp1.JPG>
+Package pdftex.def Info: figure/stdexp1.JPG  used on input line 39. on input li
+ne 39.
+Package pdftex.def Info: Requested size: 149.95758pt x 95.75604pt on input line
+ 39.
 
-Overfull \vbox (5.63348pt too high) has occurred while \output is active []
+Overfull \vbox (5.13345pt too high) has occurred while \output is active []
 
 
 [9
 
- <./figure/50-2.PNG>]
-<figure/200-1.PNG, id=430, 419.31656pt x 505.89pt>
-File: figure/200-1.PNG Graphic file (type png)
-<use figure/200-1.PNG>
-Package pdftex.def Info: figure/200-1.PNG  used on input line 42. on input line
- 42.
-Package pdftex.def Info: Requested size: 125.79593pt x 151.76816pt on input lin
-e 42.
-
-Overfull \vbox (5.63348pt too high) has occurred while \output is active []
+ <./figure/stdexp1.JPG>]
+Overfull \vbox (5.13345pt too high) has occurred while \output is active []
 
 
 [10
 
- <./figure/200-1.PNG>]
-<figure/200-2.PNG, id=468, 462.97969pt x 538.26094pt>
-File: figure/200-2.PNG Graphic file (type png)
-<use figure/200-2.PNG>
-Package pdftex.def Info: figure/200-2.PNG  used on input line 49. on input line
- 49.
-Package pdftex.def Info: Requested size: 129.63342pt x 150.71204pt on input lin
-e 49.
-
-Overfull \vbox (5.63348pt too high) has occurred while \output is active []
+]
+Overfull \vbox (5.13345pt too high) has occurred while \output is active []
 
 
 [11
 
- <./figure/200-2.PNG>]
-<figure/551-1.PNG, id=505, 462.97969pt x 505.13719pt>
-File: figure/551-1.PNG Graphic file (type png)
-<use figure/551-1.PNG>
-Package pdftex.def Info: figure/551-1.PNG  used on input line 56. on input line
- 56.
-Package pdftex.def Info: Requested size: 138.89497pt x 151.54233pt on input lin
-e 56.
-
-Overfull \vbox (5.63348pt too high) has occurred while \output is active []
+]
+Overfull \vbox (5.13345pt too high) has occurred while \output is active []
 
 
 [12
 
- <./figure/551-1.PNG>]
-<figure/551-2.PNG, id=543, 410.2828pt x 532.23843pt>
-File: figure/551-2.PNG Graphic file (type png)
-<use figure/551-2.PNG>
-Package pdftex.def Info: figure/551-2.PNG  used on input line 63. on input line
- 63.
-Package pdftex.def Info: Requested size: 114.8784pt x 149.02574pt on input line
- 63.
-
-Overfull \vbox (5.63348pt too high) has occurred while \output is active []
+]
+Overfull \vbox (5.13345pt too high) has occurred while \output is active []
 
 
 [13
 
- <./figure/551-2.PNG>]
-<figure/951-1.PNG, id=581, 411.78844pt x 510.40688pt>
-File: figure/951-1.PNG Graphic file (type png)
-<use figure/951-1.PNG>
-Package pdftex.def Info: figure/951-1.PNG  used on input line 70. on input line
- 70.
-Package pdftex.def Info: Requested size: 123.53748pt x 153.12323pt on input lin
-e 70.
-
-Overfull \vbox (5.63348pt too high) has occurred while \output is active []
+]
+Overfull \vbox (5.13345pt too high) has occurred while \output is active []
 
 
 [14
 
- <./figure/951-1.PNG>]
-<figure/951-2.PNG, id=618, 465.99094pt x 545.78906pt>
-File: figure/951-2.PNG Graphic file (type png)
-<use figure/951-2.PNG>
-Package pdftex.def Info: figure/951-2.PNG  used on input line 77. on input line
- 77.
-Package pdftex.def Info: Requested size: 130.47656pt x 152.81989pt on input lin
-e 77.
-
-Overfull \vbox (5.63348pt too high) has occurred while \output is active []
+]
+Overfull \vbox (5.13345pt too high) has occurred while \output is active []
 
 
 [15
 
- <./figure/951-2.PNG>]) (partial/layer_experiment2.tex (paper.toc) [16
+]
+Overfull \vbox (5.13345pt too high) has occurred while \output is active []
+
+
+[16
+
+]) (partial/Requestschedule.tex (paper.toc) [17
+
+] [18
 
 ]
-<figure/onestd.PNG, id=694, 724.95844pt x 253.69781pt>
-File: figure/onestd.PNG Graphic file (type png)
-<use figure/onestd.PNG>
-Package pdftex.def Info: figure/onestd.PNG  used on input line 9. on input line
- 9.
-Package pdftex.def Info: Requested size: 289.97824pt x 101.47733pt on input lin
-e 9.
-
-[17
-
- <./figure/onestd.PNG>]
-<figure/twostd.PNG, id=728, 412.54124pt x 263.48438pt>
-File: figure/twostd.PNG Graphic file (type png)
-<use figure/twostd.PNG>
-Package pdftex.def Info: figure/twostd.PNG  used on input line 17. on input lin
-e 17.
-Package pdftex.def Info: Requested size: 206.27011pt x 131.74185pt on input lin
-e 17.
- [18
-
- <./figure/twostd.PNG>]
-<figure/accuracy.PNG, id=762, 335.00156pt x 233.37187pt>
-File: figure/accuracy.PNG Graphic file (type png)
-<use figure/accuracy.PNG>
-Package pdftex.def Info: figure/accuracy.PNG  used on input line 26. on input l
-ine 26.
-Package pdftex.def Info: Requested size: 167.50037pt x 116.68564pt on input lin
-e 26.
+<figure/reducesuspend.JPG, id=740, 628.59843pt x 121.20282pt>
+File: figure/reducesuspend.JPG Graphic file (type jpg)
+<use figure/reducesuspend.JPG>
+Package pdftex.def Info: figure/reducesuspend.JPG  used on input line 19. on in
+put line 19.
+Package pdftex.def Info: Requested size: 251.4349pt x 48.48026pt on input line 
+19.
+<figure/reducesuspend2.JPG, id=741, 619.56468pt x 138.5175pt>
+File: figure/reducesuspend2.JPG Graphic file (type jpg)
+<use figure/reducesuspend2.JPG>
+Package pdftex.def Info: figure/reducesuspend2.JPG  used on input line 19. on i
+nput line 19.
+Package pdftex.def Info: Requested size: 247.82147pt x 55.406pt on input line 1
+9.
  [19
 
- <./figure/accuracy.PNG>]) (partial/adjthreshold.tex (paper.toc) [20
+ <./figure/reducesuspend.JPG> <./figure/reducesuspend2.JPG>]
+<figure/reducestaleness.JPG, id=777, 308.65312pt x 122.70844pt>
+File: figure/reducestaleness.JPG Graphic file (type jpg)
+<use figure/reducestaleness.JPG>
+Package pdftex.def Info: figure/reducestaleness.JPG  used on input line 26. on 
+input line 26.
+Package pdftex.def Info: Requested size: 123.45905pt x 49.08249pt on input line
+ 26.
+ [20
 
-] [21
+ <./figure/reducestaleness.JPG>]
+[21
+
+] [22
+
+] [23
+
+] [24
+
+] [25
+
+] [26
+
+]) (partial/timetable.tex (paper.toc) [27
+
+] [28
 
 ])
 \tf@nav=\write6
@@ -1130,29 +1091,31 @@ e 26.
 \tf@snm=\write8
 \openout8 = `paper.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 83.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 83.
- (paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 83.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 83.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 72.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
+
+(paper.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: DEF9167AEA8389F3AF2255489E3B8209;977.
+(rerunfilecheck)             Checksum: 6116A897F16CBC340023C2D8CF483094;955.
  ) 
 Here is how much of TeX's memory you used:
- 21422 strings out of 495217
- 422210 string characters out of 3181179
- 480587 words of memory out of 3000000
- 24164 multiletter control sequences out of 15000+200000
- 5452 words of font info for 20 fonts, out of 3000000 for 9000
+ 21483 strings out of 495217
+ 424080 string characters out of 3181179
+ 480613 words of memory out of 3000000
+ 24217 multiletter control sequences out of 15000+200000
+ 6063 words of font info for 22 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  56i,19n,67p,804b,631s stack positions out of 5000i,500n,10000p,200000b,50000s
 </home/r05922135/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmss10
 .pfb></home/r05922135/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cms
 s12.pfb></home/r05922135/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/
-cmss8.pfb>
-Output written on paper.pdf (21 pages, 971367 bytes).
+cmss8.pfb></home/r05922135/.miktex/texmfs/install/fonts/type1/public/amsfonts/c
+m/cmss9.pfb>
+Output written on paper.pdf (28 pages, 381119 bytes).
 PDF statistics:
- 887 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
- 279 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1110 PDF objects out of 1200 (max. 8388607)
+ 73 named destinations out of 1000 (max. 500000)
+ 250 words of extra memory for PDF output out of 10000 (max. 10000000)
 

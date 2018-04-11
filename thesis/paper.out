@@ -1,0 +1,16 @@
+\BOOKMARK [2][]{Outline0.1}{Introduction}{}% 1
+\BOOKMARK [3][]{Outline0.1.1.3}{Motivation}{Outline0.1}% 2
+\BOOKMARK [3][]{Outline0.1.2.4}{Objective}{Outline0.1}% 3
+\BOOKMARK [2][]{Outline0.2}{Prune}{}% 4
+\BOOKMARK [3][]{Outline0.2.1.6}{Observation}{Outline0.2}% 5
+\BOOKMARK [3][]{Outline0.2.2.7}{Prune}{Outline0.2}% 6
+\BOOKMARK [3][]{Outline0.2.3.8}{Standard deviation threshold}{Outline0.2}% 7
+\BOOKMARK [3][]{Outline0.2.4.11}{Static threshold}{Outline0.2}% 8
+\BOOKMARK [3][]{Outline0.2.5.14}{Dynamic threshold}{Outline0.2}% 9
+\BOOKMARK [2][]{Outline0.3}{Gradients request scheduling}{}% 10
+\BOOKMARK [3][]{Outline0.3.1.18}{Introduction}{Outline0.3}% 11
+\BOOKMARK [3][]{Outline0.3.2.19}{Some examples}{Outline0.3}% 12
+\BOOKMARK [3][]{Outline0.3.3.21}{Problem description}{Outline0.3}% 13
+\BOOKMARK [3][]{Outline0.3.4.24}{Scheduling}{Outline0.3}% 14
+\BOOKMARK [2][]{Outline0.4}{Timetable}{}% 15
+\BOOKMARK [3][]{Outline0.4.1.28}{Timetable}{Outline0.4}% 16

@@ -1,0 +1,16 @@
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Motivation}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Objective}{4}{0}{1}
+\beamer@sectionintoc {2}{Prune}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Observation}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{Prune}{7}{0}{2}
+\beamer@subsectionintoc {2}{3}{Standard deviation threshold}{8}{0}{2}
+\beamer@subsectionintoc {2}{4}{Static threshold}{11}{0}{2}
+\beamer@subsectionintoc {2}{5}{Dynamic threshold}{14}{0}{2}
+\beamer@sectionintoc {3}{Gradients request scheduling}{17}{0}{3}
+\beamer@subsectionintoc {3}{1}{Introduction}{18}{0}{3}
+\beamer@subsectionintoc {3}{2}{Some examples}{19}{0}{3}
+\beamer@subsectionintoc {3}{3}{Problem description}{21}{0}{3}
+\beamer@subsectionintoc {3}{4}{Scheduling}{24}{0}{3}
+\beamer@sectionintoc {4}{Timetable}{27}{0}{4}
+\beamer@subsectionintoc {4}{1}{Timetable}{28}{0}{4}

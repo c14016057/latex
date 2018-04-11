@@ -1,0 +1,31 @@
+\section{Introduction}
+
+\subsection{Motivation}
+\begin{frame}
+    \frametitle{Motivation}
+	\begin{itemize}
+		\item In large module, distributed training may be slower than single-machine training. 
+		\item Parameter server uses a lot of time on synchronous stage. 
+		\item Network is bottleneck in our system. 
+	\end{itemize}
+\end{frame}
+
+
+\subsection{Objective}
+\begin{frame}
+    \frametitle{Objective}
+    \begin{itemize}
+		\item Use software method to reduce network load. 
+			\begin{itemize}
+				\item Prune gradients by threshold. 
+					\begin{itemize}
+						\item static threshold
+						\item standard deviation threshold
+						\item dynamic threshold
+					\end{itemize}
+				\item Gradients request scheduling. 
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+

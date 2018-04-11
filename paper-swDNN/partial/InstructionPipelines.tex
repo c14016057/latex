@@ -1,0 +1,29 @@
+\section{Instruction Pipelines}
+
+\subsection{P1 and P0}
+\begin{frame}
+    \frametitle{P1 and P0}
+	\begin{itemize}
+		\item Each CPE consists of two execution pipelines.
+		\begin{itemize}
+			\item P0 : floating-pointer, vector operations. 
+			\item P1 : Control transfer, load/store and register communication operations.
+		\end{itemize}
+		\item The two execution pipelines share an Instruction Decoder and an instruction queue.
+		\item In each cycle, two instructions in the front of the queue are issued into two pipelines.
+	\end{itemize} 
+\end{frame}
+\subsection{Instructions scheduling rules}
+\begin{frame}
+	\frametitle{Instructions scheduling rules}
+	\begin{itemize}
+		\item Both instructions have no conflicts with the unifinished instructions issued before. 
+		\item The two insturctions have no RAW or WAW conflicts.
+		\item The two instructions can be handled by two execution pipelines separately.  
+	\end{itemize}
+\end{frame}
+
+
+
+	
+
